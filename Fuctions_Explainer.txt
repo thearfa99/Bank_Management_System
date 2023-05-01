@@ -1,0 +1,139 @@
+Functions and their descriptions
+
+//INBUILT FUNCTIONS
+
+Tkinter:
+Tk(), Label(), Button(), Entry(), ttk()
+
+mysql.connector:
+connect(), execute(), commit(),close()
+
+PIL:
+ImageTk, Image
+
+uuid:
+uuid4()
+
+time:
+sleep()
+
+datetime:
+now()
+
+//USER DEFINED FUNCTIONS USED
+
+register(): Takes in all relevant data from
+user as entries and stores them in
+variables.
+
+finish_reg(): Takes in all registration data and
+checks for validity and conformity
+of data to set rules.
+Then proceeds to connect to the
+SQL database and sends data to
+relevant tables.
+
+exit_reg(): Closes the registration screen.
+
+login(): Creates login interface and stores
+inputted data in variables
+
+login_session(): Takes data from login variables
+and validates user using data
+from SQL database. If the user
+has successfully logged in, the
+function creates the account
+dashboard for the respective
+user.
+
+exit_log(): Closes the login screen.
+
+logout(): Logs the user out of their account.
+
+personal_details(): Displays all personal information
+about the user from SQL
+database including account
+number and balance.
+
+exit_pd(): Closes the personal details
+screen.
+
+deposit(): Creates deposit screen with an
+entry for an amount that is stored
+in a variable.
+
+finish_deposit(): Ensures entered amount is
+permissible and updates balance
+in SQL database and deposit
+screen. Also inserts the
+transaction information into SQL
+database.
+
+exit_d(): Closes the deposit screen()
+
+withdraw(): Creates withdrawal screen with an
+entry for an amount that is stored
+in a variable.
+
+finish_withdraw(): Checks balance and ensures
+entered amount is permissible
+then updates balance in SQL
+database and deposit screen. Also
+inserts the transaction
+information into SQL database.
+
+exit_w(): Closes the withdrawal screen.
+
+send(): Creates send funds screen then
+takes the full name of receiver
+and amount and stores in
+variables.
+
+finish_send(): Finds Receiver’s account number
+from SQL database, then checks
+for conformity of set rules and
+then inserts the transaction
+information into SQL database.
+
+exit_s(): Closes the send funds screen.
+
+search(): Creates search screen and
+presents various options to
+search recent transactions.
+
+exit_search(): Closes search screen.
+
+all_tr(): Displays records from SQL
+database for all transactions from
+or to the respective user’s account
+in a table.
+
+name_tr(): Creates search by receiver’s name
+screen and stores full name
+inputted by the user in a variable.
+
+finish_name_tr(): Finds receiver’s account number
+and displays records accordingly
+from SQL database in a table.
+
+exit_name_tr(): Closes the search by receiver’s
+name screen.
+
+namer_tr(): Creates search by sender’s name
+screen and stores full name
+inputted by the user in a variable.
+
+finish_namer_tr(): Finds sender’s account number
+and displays records accordingly
+from SQL database in a table.
+
+exit_namer_tr(): Closes the search by sender’s
+name screen.
+
+d_tr(): Displays all the deposits made
+into the respective user’s account
+from the SQL database in a table.
+
+w_tr(): Displays all the withdrawals made
+into the respective user’s account
+from the SQL database in a table.
