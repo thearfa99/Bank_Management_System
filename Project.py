@@ -83,7 +83,7 @@ def finish_reg():
     confirm = temp_confirm.get()
 
     #Pyton SQL connectivity
-    con=sc.connect(host="localhost",user="root",passwd='g@arfa99*',database="beast")
+    con=sc.connect(host="localhost",user="root",passwd='7779777*',database="beast")
     cur=con.cursor()
 
     #Input constraints
@@ -167,7 +167,7 @@ def login_session():
     full_name=""
     Acc_no=""
     
-    con=sc.connect(host="localhost",user="root",passwd='g@arfa99*',database="beast")
+    con=sc.connect(host="localhost",user="root",passwd='7779777*',database="beast")
     cur=con.cursor()
     cur.execute("select * from cinfo;")
     all_records=cur.fetchall()
@@ -218,7 +218,7 @@ def personal_details():
     bal=""
 
     #connectivity
-    con=sc.connect(host="localhost",user="root",passwd='g@arfa99*',database="beast")
+    con=sc.connect(host="localhost",user="root",passwd='7779777*',database="beast")
     cur=con.cursor()
     cur.execute("select * from cinfo;")
     recs=cur.fetchall()
@@ -265,7 +265,7 @@ def deposit():
     amount = StringVar()
 
     #Pyton SQL connectivity
-    con=sc.connect(host="localhost",user="root",passwd='g@arfa99*',database="beast")
+    con=sc.connect(host="localhost",user="root",passwd='7779777*',database="beast")
     cur=con.cursor()
     cur.execute("select * from cinfo;")
     recs=cur.fetchall()
@@ -300,7 +300,7 @@ def finish_deposit():
         deposit_notif.config(text='Negative currency is not accepted', fg='red')
         return
 
-    con=sc.connect(host="localhost",user="root",passwd='g@arfa99*',database="beast")
+    con=sc.connect(host="localhost",user="root",passwd='7779777*',database="beast")
     cur=con.cursor()
     cur.execute("select * from cinfo;")
     recs=cur.fetchall()
@@ -310,7 +310,7 @@ def finish_deposit():
     con.close()
     updated_balance = current_balance
     updated_balance = float(updated_balance) + float(amount.get())
-    con=sc.connect(host="localhost",user="root",passwd='g@arfa99*',database="beast")
+    con=sc.connect(host="localhost",user="root",passwd='7779777*',database="beast")
     cur=con.cursor()
     cur.execute("select * from cinfo;")
     recs=cur.fetchall()
@@ -332,7 +332,7 @@ def finish_deposit():
     med = "Deposit"
     tyd = "d"
 
-    con=sc.connect(host="localhost",user="root",passwd='g@arfa99*',database="beast")
+    con=sc.connect(host="localhost",user="root",passwd='7779777*',database="beast")
     cur=con.cursor()
     cur.execute("insert into transactions values('{}','{}','{}','{}','{}','{}','{}')".format(tad,sad,rad,amd,d_td,med,tyd))
     con.commit()
@@ -349,7 +349,7 @@ def withdraw():
     withdraw_amount = StringVar()
 
     #Pyton SQL connectivity
-    con=sc.connect(host="localhost",user="root",passwd='g@arfa99*',database="beast")
+    con=sc.connect(host="localhost",user="root",passwd='7779777*',database="beast")
     cur=con.cursor()
     cur.execute("select * from cinfo;")
     recs=cur.fetchall()
@@ -385,7 +385,7 @@ def finish_withdraw():
         withdraw_notif.config(text='Negative currency is not accepted', fg='red')
         return
 
-    con=sc.connect(host="localhost",user="root",passwd='g@arfa99*',database="beast")
+    con=sc.connect(host="localhost",user="root",passwd='7779777*',database="beast")
     cur=con.cursor()
     cur.execute("select * from cinfo;")
     recs=cur.fetchall()
@@ -400,7 +400,7 @@ def finish_withdraw():
 
     updated_balance = current_balance
     updated_balance = float(updated_balance) - float(withdraw_amount.get())
-    con=sc.connect(host="localhost",user="root",passwd='g@arfa99*',database="beast")
+    con=sc.connect(host="localhost",user="root",passwd='7779777*',database="beast")
     cur=con.cursor()
     cur.execute("select * from cinfo;")
     recs=cur.fetchall()
@@ -423,7 +423,7 @@ def finish_withdraw():
     me = "withdrawal"
     ty = "w"
 
-    con=sc.connect(host="localhost",user="root",passwd='g@arfa99*',database="beast")
+    con=sc.connect(host="localhost",user="root",passwd='7779777*',database="beast")
     cur=con.cursor()
     cur.execute("insert into transactions values('{}','{}','{}','{}','{}','{}','{}')".format(ta,sa,ra,am,d_t,me,ty))
     con.commit()
@@ -444,7 +444,7 @@ def send():
     
 
     #Pyton SQL connectivity
-    con=sc.connect(host="localhost",user="root",passwd='g@arfa99*',database="beast")
+    con=sc.connect(host="localhost",user="root",passwd='7779777*',database="beast")
     cur=con.cursor()
     cur.execute("select * from cinfo;")
     recs=cur.fetchall()
@@ -491,7 +491,7 @@ def finish_send():
     typ = "s"
 
     #Receiver's acc no
-    con=sc.connect(host="localhost",user="root",passwd='g@arfa99*',database="beast")
+    con=sc.connect(host="localhost",user="root",passwd='7779777*',database="beast")
     cur=con.cursor()
     cur.execute("select * from cinfo;")
     recs=cur.fetchall()
@@ -512,7 +512,7 @@ def finish_send():
         send_notif.config(text='Negative currency is not accepted', fg='red')
         return
 
-    con=sc.connect(host="localhost",user="root",passwd='g@arfa99*',database="beast")
+    con=sc.connect(host="localhost",user="root",passwd='7779777*',database="beast")
     cur=con.cursor()
     cur.execute("select * from cinfo;")
     recs=cur.fetchall()
@@ -530,7 +530,7 @@ def finish_send():
         return
 
     #Appending record into transactions table
-    con=sc.connect(host="localhost",user="root",passwd='g@arfa99*',database="beast")
+    con=sc.connect(host="localhost",user="root",passwd='7779777*',database="beast")
     cur=con.cursor()
     cur.execute("insert into transactions values('{}','{}','{}','{}','{}','{}','{}')".format(t_id,s_acc_no,r_acc_no,amt,dnt,method,typ))
     con.commit()
@@ -539,7 +539,7 @@ def finish_send():
     #Updating cinfo for sender's balance
     updated_balance = current_balance
     updated_balance = float(updated_balance) - float(send_amount.get())
-    con=sc.connect(host="localhost",user="root",passwd='g@arfa99*',database="beast")
+    con=sc.connect(host="localhost",user="root",passwd='7779777*',database="beast")
     cur=con.cursor()
     cur.execute("select * from cinfo;")
     recs=cur.fetchall()
@@ -554,7 +554,7 @@ def finish_send():
 
     #Updating cinfo for receiver's balance
     r_balance=float(send_amount.get())
-    con=sc.connect(host="localhost",user="root",passwd='g@arfa99*',database="beast")
+    con=sc.connect(host="localhost",user="root",passwd='7779777*',database="beast")
     cur=con.cursor()
     cur.execute("update cinfo set balance = balance + {} where acc_no = '{}'".format(r_balance,r_acc_no))
     con.commit()
@@ -629,7 +629,7 @@ def all_tr():
 
     tree.pack()
     
-    con=sc.connect(host="localhost",user="root",passwd='g@arfa99*',database="beast")
+    con=sc.connect(host="localhost",user="root",passwd='7779777*',database="beast")
     cur=con.cursor()
     cur.execute("select * from transactions where s_acc_no = '{}' or r_acc_no = '{}' order by dnt desc".format(Acc_no,Acc_no))
     recs=cur.fetchall()
@@ -670,7 +670,7 @@ def finish_name_tr():
     import tkinter as tk
     rac="" 
     #Name acc no search
-    con=sc.connect(host="localhost",user="root",passwd='g@arfa99*',database="beast")
+    con=sc.connect(host="localhost",user="root",passwd='7779777*',database="beast")
     cur=con.cursor()
     cur.execute("select * from cinfo;")
     recs=cur.fetchall()
@@ -684,7 +684,7 @@ def finish_name_tr():
         return
     
     #Checking if any previous records exist
-    con=sc.connect(host="localhost",user="root",passwd='g@arfa99*',database="beast")
+    con=sc.connect(host="localhost",user="root",passwd='7779777*',database="beast")
     cur=con.cursor()
     cur.execute("select * from transactions where s_acc_no = '{}' and r_acc_no = '{}'".format(Acc_no,rac))
     recs=cur.fetchall()
@@ -730,7 +730,7 @@ def finish_name_tr():
     tree.pack()
 
 
-    con=sc.connect(host="localhost",user="root",passwd='g@arfa99*',database="beast")
+    con=sc.connect(host="localhost",user="root",passwd='7779777*',database="beast")
     cur=con.cursor()
     cur.execute("select * from transactions where s_acc_no = '{}' and r_acc_no = '{}' order by dnt desc".format(Acc_no,rac))
     recs=cur.fetchall()         
@@ -771,7 +771,7 @@ def finish_namer_tr():
     import tkinter as tk
     racr="" 
     #Name acc no search
-    con=sc.connect(host="localhost",user="root",passwd='g@arfa99*',database="beast")
+    con=sc.connect(host="localhost",user="root",passwd='7779777*',database="beast")
     cur=con.cursor()
     cur.execute("select * from cinfo;")
     recs=cur.fetchall()
@@ -785,7 +785,7 @@ def finish_namer_tr():
         return
     
     #Checking if any previous records exist
-    con=sc.connect(host="localhost",user="root",passwd='g@arfa99*',database="beast")
+    con=sc.connect(host="localhost",user="root",passwd='7779777*',database="beast")
     cur=con.cursor()
     cur.execute("select * from transactions where s_acc_no = '{}' and r_acc_no = '{}'".format(racr,Acc_no))
     recs=cur.fetchall()
@@ -831,7 +831,7 @@ def finish_namer_tr():
     tree.pack()
 
 
-    con=sc.connect(host="localhost",user="root",passwd='g@arfa99*',database="beast")
+    con=sc.connect(host="localhost",user="root",passwd='7779777*',database="beast")
     cur=con.cursor()
     cur.execute("select * from transactions where s_acc_no = '{}' and r_acc_no = '{}' order by dnt desc".format(racr,Acc_no))
     recs=cur.fetchall()         
@@ -880,7 +880,7 @@ def d_tr():
 
     tree.pack()
     
-    con=sc.connect(host="localhost",user="root",passwd='g@arfa99*',database="beast")
+    con=sc.connect(host="localhost",user="root",passwd='7779777*',database="beast")
     cur=con.cursor()
     cur.execute("select * from transactions where s_acc_no = '{}' and r_acc_no = '{}' and type = 'd'".format(Acc_no,Acc_no))
     recs=cur.fetchall()
@@ -929,7 +929,7 @@ def w_tr():
 
     tree.pack()
     
-    con=sc.connect(host="localhost",user="root",passwd='g@arfa99*',database="beast")
+    con=sc.connect(host="localhost",user="root",passwd='7779777*',database="beast")
     cur=con.cursor()
     cur.execute("select * from transactions where s_acc_no = '{}' and r_acc_no = '{}' and type = 'w'".format(Acc_no,Acc_no))
     recs=cur.fetchall()
