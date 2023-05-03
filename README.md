@@ -10,3 +10,5 @@ The banking management system has the following modules:
 6.Search transactions
 
 The explaination to the code and the functions can be found in the Functions_Explainer.txt file in the repo.
+
+In order to run the project locally please create a database using MySQL locally, the command for which are mentioned in the MySQL_commands.txt file.The tables have been designed to work with the restrictions coded in the main python file.
