@@ -1,1 +1,32 @@
-
+create database beast;
+use beast;
+create table cinfo(acc_no char(36) NOT NULL PRIMARY KEY,name varchar(70),pno char(10),gender varchar(10),mailid varchar(70),username varchar(20),password varchar(9),balance float);
+desc cinfo;
+//Result
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| acc_no   | char(36)    | NO   | PRI | NULL    |       |
+| name     | varchar(70) | YES  |     | NULL    |       |
+| pno      | char(10)    | YES  |     | NULL    |       |
+| gender   | varchar(10) | YES  |     | NULL    |       |
+| mailid   | varchar(70) | YES  |     | NULL    |       |
+| username | varchar(20) | YES  |     | NULL    |       |
+| password | varchar(9)  | YES  |     | NULL    |       |
+| balance  | float       | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+create table transactions(t_id char(36) NOT NULL PRIMARY KEY,s_acc_no char(36),r_acc_no char(36),amt varchar(30),dnt varchar(50),method varchar(90),type varchar(5));
+desc transactions;
+//Result
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| t_id     | char(36)    | NO   | PRI | NULL    |       |
+| s_acc_no | char(36)    | YES  |     | NULL    |       |
+| r_acc_no | char(36)    | YES  |     | NULL    |       |
+| amt      | varchar(30) | YES  |     | NULL    |       |
+| dnt      | varchar(50) | YES  |     | NULL    |       |
+| method   | varchar(90) | YES  |     | NULL    |       |
+| type     | varchar(5)  | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+quit;
